@@ -1,0 +1,36 @@
+{
+  "Environments": [
+    {
+      "Name": "QA",
+      "Portals": [
+        {
+          "Name": "CUSTCARE",
+          "BaseLoginUrl": "http://lwebqa03.ixtelecom.com/custcare",
+          "Users": [
+            {
+              "Type": "CustcareUser",
+              "Username": "testl5",
+              "Password": "test123"
+            },
+            {
+              "Type": "IdtUser",
+              "Username": "am\\dmontecinos",
+              "Password": "P@ssw0rd20!8"
+            }
+          ]
+        }
+      ],
+      "DBs": [
+        {
+          "Name": "DEBIT",
+          "Host": "dbt1qa.crvy6h4fehaf.us-east-1.rds.amazonaws.com",
+          "User": "debit",
+          "Password": "oracle",
+          "Port": "1521",
+          "ServiceName": "dbt1qa",
+          "Type": "Oracle"
+        }
+      ]
+    }
+  ]
+}

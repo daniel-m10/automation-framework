@@ -1,2 +1,2 @@
-rootProject.name = 'automation.framework'
-
+rootProject.name = 'custcare-automation'
+include 'custcare-ui'

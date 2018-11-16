@@ -1,0 +1,47 @@
+{
+  "configuration": {
+    "status": "error",
+    "name": "Custcare_Automation_Log_Config_File",
+    "packages": "idt.custcare.ui",
+    "ThresholdFilter": {
+      "level": "all"
+    },
+    "appenders": {
+      "Console": {
+        "name": "STDOUT",
+        "PatternLayout": {
+          "pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+        }
+      },
+      "RollingFile": {
+        "name": "File",
+        "fileName": "logs/custcare-automation.log",
+        "filePattern": "logs/custcare-automation-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "PatternLayout": {
+          "pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+        },
+        "Policies": {
+          "SizeBasedTriggeringPolicy": {
+            "size": "10 MB"
+          }
+        },
+        "DefaultRolloverStrategy": {
+          "max": "10"
+        }
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "all",
+        "AppenderRef": [
+          {
+            "ref": "STDOUT"
+          },
+          {
+            "ref": "File"
+          }
+        ]
+      }
+    }
+  }
+}
